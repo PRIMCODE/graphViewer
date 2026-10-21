@@ -67,7 +67,12 @@
 				if(!n) continue;
 				if(n.src_id && n.tgt_id)
 				{
-					this.newEdge(n);
+					if(n.src_id === n.tgt_id){
+						this.newNode(n);
+					}
+					else {
+						this.newEdge(n);
+					}
 				}
 				else
 				{
