@@ -129,7 +129,7 @@ NEW
 
 .node.vol,
 .node.sit {
-fill: lightgreen;
+	fill: #26dea8;
 }
 
 .trk {
@@ -137,8 +137,11 @@ fill: lightgreen;
 }
 
 .node.hub {
-	fill: green;
+	fill: #0c9fca;
 }
 .node.usr {
 	fill: pink;
+}
+.node.grp {
+	fill: violet;
 }

@@ -306,12 +306,12 @@
 			.on("mouseenter", function(d) {
 				if(graph.dragging){return;}
 				graph.getShape(graph.node_lut[d._id]).classList.add("hover");
-				graph.force.stop();
+				//graph.force.stop();
 				path.style("marker-end",  "url(#arrowO)")
 			})
 			.on("mouseleave", function(d) {
 				if(graph.dragging){return;}
-				graph.force.resume();
+				//graph.force.resume();
 				graph.getShape(graph.node_lut[d._id]).classList.remove("hover");
 				if(graph.selection.indexOf(graph.node_lut[d._id]) == -1){
 					path.style("marker-end",  "url(#arrowD)");
@@ -477,7 +477,7 @@
 
 		g.on("mouseenter", function(d) {
 			if(graph.dragging){return;}
-			graph.force.stop();
+			//graph.force.stop();
 			graph.showConnections(graph.node_lut[d._id]);
 			graph.getShape(graph.node_lut[d._id]).classList.remove("highlight");
 			graph.getShape(graph.node_lut[d._id]).classList.add("hover");
@@ -486,7 +486,7 @@
 		});
 		g.on("mouseleave", function(d) {
 			if(graph.dragging){return;}
-			graph.force.resume();
+			//graph.force.resume();
 			graph.unhighlightElements();
 			graph.getShape(graph.node_lut[d._id]).classList.remove("hover");
 //			tools.style({opacity:'0.0'});
